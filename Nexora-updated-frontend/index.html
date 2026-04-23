@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nexora | Social Media App UI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="site-bg"></div>
+
+    <div class="page-shell">
+      <header class="hero">
+        <nav class="topbar">
+          <a class="brand" href="#app">Nexora</a>
+
+          <div class="topbar-links">
+            <a href="#features">Features</a>
+            <a href="#app">App Preview</a>
+            <a href="#creator">Creators</a>
+          </div>
+
+          <div class="topbar-actions">
+            <button class="ghost-button" type="button">Log In</button>
+            <button class="primary-button" type="button">Launch Beta</button>
+          </div>
+        </nav>
+
+        <section class="hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Play Framework Frontend Concept</p>
+            <h1>Design a social app that feels alive the second it loads.</h1>
+            <p class="hero-text">
+              Nexora is a modern social platform concept for creators, close
+              communities, and real-time conversations. This frontend prototype
+              focuses on bold visuals, clear hierarchy, and app-style patterns
+              you can later wire into Scala and Play routes.
+            </p>
+
+            <div class="hero-actions">
+              <a class="primary-button" href="#app">Explore App UI</a>
+              <a class="secondary-button" href="#features">See Features</a>
+            </div>
+
+            <div class="hero-metrics">
+              <article>
+                <strong>24K</strong>
+                <span>active creators</span>
+              </article>
+              <article>
+                <strong>1.9M</strong>
+                <span>community reactions</span>
+              </article>
+              <article>
+                <strong>87%</strong>
+                <span>return engagement</span>
+              </article>
+            </div>
+          </div>
+
+          <div class="hero-preview">
+            <div class="floating-card trend-card">
+              <span class="tiny-label">Trending now</span>
+              <strong>#NightShiftDesign</strong>
+              <p>12.4K posts in the last 6 hours</p>
+            </div>
+
+            <div class="phone-frame">
+              <div class="phone-top">
+                <span class="status-dot online"></span>
+                <strong>For You</strong>
+                <span class="tiny-pill">Live</span>
+              </div>
+
+              <div class="story-row">
+                <div class="story active">Ava</div>
+                <div class="story">Kai</div>
+                <div class="story">Noor</div>
+                <div class="story">Mia</div>
+              </div>
+
+              <article class="phone-post">
+                <div class="post-author">
+                  <div class="avatar coral">L</div>
+                  <div>
+                    <strong>Lina Chen</strong>
+                    <span>3 min ago</span>
+                  </div>
+                </div>
+
+                <h3>Launching a creator circle for indie devs building in public.</h3>
+                <p>
+                  Looking for people who like product diaries, UI experiments,
+                  and fast feedback loops.
+                </p>
+
+                <div class="post-art gradient-card sunrise"></div>
+
+                <div class="post-stats">
+                  <span>4.8K likes</span>
+                  <span>322 replies</span>
+                  <span>128 shares</span>
+                </div>
+              </article>
+            </div>
+
+            <div class="floating-card chat-card">
+              <span class="tiny-label">Direct room</span>
+              <strong>Design Crew</strong>
+              <p>7 members typing right now</p>
+            </div>
+          </div>
+        </section>
+      </header>
+
+      <main>
+        <section class="feature-section" id="features">
+          <div class="section-heading">
+            <p class="eyebrow">Product Highlights</p>
+            <h2>Built for feeds, rooms, creators, and community moments</h2>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-card">
+              <span class="feature-icon">01</span>
+              <h3>Immersive Feed</h3>
+              <p>
+                A layered feed with story rails, creator cards, large media
+                surfaces, and reaction patterns that feel native on desktop and
+                mobile.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <span class="feature-icon">02</span>
+              <h3>Community Rooms</h3>
+              <p>
+                Real-time group spaces for topic-based discussion, member
+                discovery, and event-driven interaction without clutter.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <span class="feature-icon">03</span>
+              <h3>Creator Momentum</h3>
+              <p>
+                Spotlight modules for growth, audience snapshots, and post
+                performance so creators always know what is landing.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="app-section" id="app">
+          <div class="section-heading">
+            <p class="eyebrow">App Preview</p>
+            <h2>Desktop social dashboard with a mobile-friendly structure</h2>
+          </div>
+
+          <div class="app-shell">
+            <aside class="sidebar">
+              <div class="sidebar-brand">
+                <div class="brand-mark">P</div>
+                <div>
+                  <strong>Nexora</strong>
+                  <span>Creator social</span>
+                </div>
+              </div>
+
+              <nav class="sidebar-nav">
+                <button class="nav-item active" data-panel="feed" type="button">Feed</button>
+                <button class="nav-item" data-panel="messages" type="button">Messages</button>
+                <button class="nav-item" data-panel="discover" type="button">Discover</button>
+                <button class="nav-item" data-panel="profile" type="button">Profile</button>
+              </nav>
+
+              <div class="sidebar-promo">
+                <p class="tiny-label">Upgrade</p>
+                <h3>Turn followers into a private circle.</h3>
+                <button class="secondary-button small" type="button">View Plans</button>
+              </div>
+            </aside>
+
+            <div class="app-main">
+              <div class="app-toolbar">
+                <div>
+                  <p class="toolbar-label">Today</p>
+                  <h3>Your network is moving fast</h3>
+                </div>
+
+                <div class="toolbar-actions">
+                  <button class="filter-chip active" data-filter="all" type="button">All</button>
+                  <button class="filter-chip" data-filter="creators" type="button">Creators</button>
+                  <button class="filter-chip" data-filter="rooms" type="button">Rooms</button>
+                  <button class="filter-chip" data-filter="media" type="button">Media</button>
+                </div>
+              </div>
+
+              <div class="panel-stack">
+                <section class="panel feed-panel active" data-panel-content="feed">
+                  <div class="story-strip">
+                    <div class="story-card new-story">
+                      <span>+</span>
+                      <strong>New story</strong>
+                    </div>
+                    <div class="story-card"><strong>Ari</strong><span>Live session</span></div>
+                    <div class="story-card"><strong>June</strong><span>Travel reel</span></div>
+                    <div class="story-card"><strong>Omar</strong><span>Studio drop</span></div>
+                    <div class="story-card"><strong>Sana</strong><span>Behind the scenes</span></div>
+                  </div>
+
+                  <div class="composer-card">
+                    <div class="composer-top">
+                      <div class="avatar gold">Y</div>
+                      <input
+                        id="composerInput"
+                        type="text"
+                        placeholder="Share an update with your circle..."
+                      />
+                    </div>
+                    <div class="composer-actions">
+                      <button class="ghost-button small" type="button">Photo</button>
+                      <button class="ghost-button small" type="button">Poll</button>
+                      <button class="primary-button small" id="publishButton" type="button">
+                        Publish
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="feed-list" id="feedList">
+                    <article class="feed-card" data-category="creators media">
+                      <div class="feed-top">
+                        <div class="post-author">
+                          <div class="avatar teal">A</div>
+                          <div>
+                            <strong>Ava Stone</strong>
+                            <span>UI Creator • 12 min ago</span>
+                          </div>
+                        </div>
+                        <span class="tiny-pill">Featured</span>
+                      </div>
+
+                      <h3>Testing a warmer visual direction for our new creator dashboard.</h3>
+                      <p>
+                        Swapped the sterile layout for layered color fields,
+                        stronger typography, and faster scan points. Feels much
+                        more human now.
+                      </p>
+                      <div class="post-art gradient-card aurora"></div>
+                      <div class="feed-actions">
+                        <button class="reaction-button" type="button" data-count="1840">Like</button>
+                        <button class="reaction-button" type="button" data-count="284">Comment</button>
+                        <button class="reaction-button" type="button" data-count="96">Share</button>
+                      </div>
+                    </article>
+
+                    <article class="feed-card" data-category="rooms">
+                      <div class="feed-top">
+                        <div class="post-author">
+                          <div class="avatar coral">K</div>
+                          <div>
+                            <strong>Kai Moreno</strong>
+                            <span>Room Host • 38 min ago</span>
+                          </div>
+                        </div>
+                        <span class="tiny-pill muted">Room</span>
+                      </div>
+
+                      <h3>Tonight’s audio room is about shipping side projects with tiny teams.</h3>
+                      <p>
+                        We’re talking launch pages, MVP tradeoffs, and how to
+                        build momentum without burning out.
+                      </p>
+                      <div class="room-preview">
+                        <div>
+                          <strong>Launch Room</strong>
+                          <span>2.4K listening</span>
+                        </div>
+                        <button class="secondary-button small" type="button">Join Room</button>
+                      </div>
+                      <div class="feed-actions">
+                        <button class="reaction-button" type="button" data-count="910">Interested</button>
+                        <button class="reaction-button" type="button" data-count="142">Reply</button>
+                        <button class="reaction-button" type="button" data-count="44">Share</button>
+                      </div>
+                    </article>
+
+                    <article class="feed-card" data-category="media creators">
+                      <div class="feed-top">
+                        <div class="post-author">
+                          <div class="avatar violet">N</div>
+                          <div>
+                            <strong>Noor Ali</strong>
+                            <span>Filmmaker • 1 hr ago</span>
+                          </div>
+                        </div>
+                        <span class="tiny-pill">New drop</span>
+                      </div>
+
+                      <h3>Posted a 20-second teaser for the short film and the save rate spiked.</h3>
+                      <p>
+                        Shorter intro, stronger sound design, and one focused
+                        message beat the longer cut by a wide margin.
+                      </p>
+                      <div class="post-art gradient-card dusk"></div>
+                      <div class="feed-actions">
+                        <button class="reaction-button" type="button" data-count="3260">Like</button>
+                        <button class="reaction-button" type="button" data-count="512">Comment</button>
+                        <button class="reaction-button" type="button" data-count="201">Repost</button>
+                      </div>
+                    </article>
+                  </div>
+                </section>
+
+                <section class="panel utility-panel" data-panel-content="messages">
+                  <div class="panel-heading">
+                    <div>
+                      <p class="toolbar-label">Messages</p>
+                      <h3>Fast, room-aware conversations</h3>
+                    </div>
+                    <span class="tiny-pill">18 unread</span>
+                  </div>
+
+                  <div class="message-layout">
+                    <div class="message-list">
+                      <article class="message-item active">
+                        <strong>Design Crew</strong>
+                        <span>Prototype looks much stronger now.</span>
+                      </article>
+                      <article class="message-item">
+                        <strong>Lina Chen</strong>
+                        <span>Can you share the hero mockup?</span>
+                      </article>
+                      <article class="message-item">
+                        <strong>Creator Ops</strong>
+                        <span>Analytics summary is ready.</span>
+                      </article>
+                    </div>
+
+                    <div class="message-thread">
+                      <div class="bubble incoming">We should make the onboarding feel more personal.</div>
+                      <div class="bubble outgoing">Agreed. I’m leaning toward creator-first setup cards.</div>
+                      <div class="bubble incoming">That fits the brand much better.</div>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="panel utility-panel" data-panel-content="discover">
+                  <div class="panel-heading">
+                    <div>
+                      <p class="toolbar-label">Discover</p>
+                      <h3>Find communities that match your momentum</h3>
+                    </div>
+                  </div>
+
+                  <div class="discover-grid">
+                    <article class="discover-card">
+                      <strong>Indie Makers</strong>
+                      <span>14.2K members</span>
+                      <p>Daily build logs, product feedback, and launch nights.</p>
+                    </article>
+                    <article class="discover-card">
+                      <strong>Film Frames</strong>
+                      <span>8.9K members</span>
+                      <p>Cinematography studies, editing tips, and critique swaps.</p>
+                    </article>
+                    <article class="discover-card">
+                      <strong>Street Fashion Lab</strong>
+                      <span>21K members</span>
+                      <p>Photo drops, trend boards, and creator collabs.</p>
+                    </article>
+                  </div>
+                </section>
+
+                <section class="panel utility-panel" data-panel-content="profile">
+                  <div class="panel-heading">
+                    <div>
+                      <p class="toolbar-label">Profile</p>
+                      <h3>Creator-facing growth snapshot</h3>
+                    </div>
+                  </div>
+
+                  <div class="profile-overview">
+                    <div class="profile-card large">
+                      <div class="post-author">
+                        <div class="avatar gold">Y</div>
+                        <div>
+                          <strong>Yours Truly</strong>
+                          <span>@yourhandle</span>
+                        </div>
+                      </div>
+                      <p>
+                        Building experimental interfaces, sharing progress, and
+                        connecting with product-minded communities.
+                      </p>
+                    </div>
+                    <div class="profile-card">
+                      <strong>48.2K</strong>
+                      <span>Total reach</span>
+                    </div>
+                    <div class="profile-card">
+                      <strong>6.7%</strong>
+                      <span>Engagement rate</span>
+                    </div>
+                    <div class="profile-card">
+                      <strong>128</strong>
+                      <span>New followers</span>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+
+            <aside class="right-rail" id="creator">
+              <section class="rail-card">
+                <p class="toolbar-label">Creator Snapshot</p>
+                <h3>Performance this week</h3>
+                <div class="stat-list">
+                  <div class="stat-row">
+                    <span>Profile visits</span>
+                    <strong>12.8K</strong>
+                  </div>
+                  <div class="stat-row">
+                    <span>Post saves</span>
+                    <strong>3.1K</strong>
+                  </div>
+                  <div class="stat-row">
+                    <span>Room joins</span>
+                    <strong>842</strong>
+                  </div>
+                </div>
+              </section>
+
+              <section class="rail-card">
+                <p class="toolbar-label">Suggested People</p>
+                <div class="suggested-list">
+                  <article>
+                    <div class="post-author">
+                      <div class="avatar teal">M</div>
+                      <div>
+                        <strong>Mira Sol</strong>
+                        <span>Motion designer</span>
+                      </div>
+                    </div>
+                    <button class="ghost-button small" type="button">Follow</button>
+                  </article>
+                  <article>
+                    <div class="post-author">
+                      <div class="avatar coral">R</div>
+                      <div>
+                        <strong>Raf Cole</strong>
+                        <span>Music producer</span>
+                      </div>
+                    </div>
+                    <button class="ghost-button small" type="button">Follow</button>
+                  </article>
+                  <article>
+                    <div class="post-author">
+                      <div class="avatar violet">T</div>
+                      <div>
+                        <strong>Tess Bloom</strong>
+                        <span>Founder</span>
+                      </div>
+                    </div>
+                    <button class="ghost-button small" type="button">Follow</button>
+                  </article>
+                </div>
+              </section>
+
+              <section class="rail-card">
+                <p class="toolbar-label">Launch Checklist</p>
+                <ul class="check-list">
+                  <li>Responsive homepage and app layout</li>
+                  <li>Feed, messages, discover, and profile views</li>
+                  <li>Interactive buttons and filter states</li>
+                </ul>
+              </section>
+            </aside>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
