@@ -1,0 +1,41 @@
+@main("Log In | Nexora") {
+  <div class="site-bg"></div>
+
+  <div class="page-shell" style="display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+    <div class="floating-card" style="width: 100%; max-width: 400px; padding: 2.5rem; display: flex; flex-direction: column; gap: 1.5rem;">
+      
+      <div style="text-align: center;">
+        <a href="/" style="text-decoration: none; font-size: 1.5rem; font-weight: 700; color: #171219;">Nexora</a>
+        <h2 style="margin-top: 1rem; color: #171219;">Welcome Back</h2>
+        <p style="color: #6a5666; font-size: 0.9rem;">Sign in to continue to your dashboard.</p>
+      </div>
+
+      <form id="loginForm" style="display: flex; flex-direction: column; gap: 1rem;">
+        <input 
+          id="loginEmail" 
+          type="email" 
+          placeholder="Email Address" 
+          required 
+          style="width: 100%; padding: 0.8rem 1rem; border-radius: 8px; border: 1px solid rgba(82, 52, 73, 0.12); background: rgba(255, 255, 255, 0.7); color: #171219; font-family: inherit;" 
+        />
+        <input 
+          id="loginPassword" 
+          type="password" 
+          placeholder="Password" 
+          required 
+          style="width: 100%; padding: 0.8rem 1rem; border-radius: 8px; border: 1px solid rgba(82, 52, 73, 0.12); background: rgba(255, 255, 255, 0.7); color: #171219; font-family: inherit;" 
+        />
+        
+        <p id="loginError" style="color: #ff6b6b; font-size: 0.85rem; display: none; margin: 0;"></p>
+
+        <button class="primary-button" type="submit" style="margin-top: 0.5rem; width: 100%; justify-content: center;">Log In</button>
+      </form>
+
+      <div style="text-align: center; margin-top: 0.5rem;">
+        <span style="color: #6a5666; font-size: 0.9rem;">
+          Don't have an account? <a href="/signup" style="color: #171219; text-decoration: underline; font-weight: 600;">Sign Up</a>
+        </span>
+      </div>
+    </div>
+  </div>
+}

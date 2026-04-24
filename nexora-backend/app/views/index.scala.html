@@ -1,0 +1,292 @@
+@main("Nexora | Social Media App UI") {
+<div class="site-bg"></div>
+
+<div class="page-shell">
+  <header class="hero">
+    <nav class="topbar">
+      <a class="brand" href="#app">Nexora</a>
+
+      <div class="topbar-links">
+        <a href="#features">Features</a>
+        <a href="#app">App Preview</a>
+        <a href="#creator">Creators</a>
+      </div>
+
+      <div class="topbar-actions">
+        <a href="/login" class="ghost-button">Log In</a>
+        <a href="/signup" class="primary-button">Sign Up</a>
+      </div>
+    </nav>
+
+    <section class="hero-grid">
+      <div class="hero-copy">
+        <!-- <p class="eyebrow">Play Framework Frontend Concept</p> -->
+        <h1>Redefining social — from static feeds to living moments.</h1>
+        <p class="hero-text">
+          Nexora is built for real-time conversations, creator circles, and fast-moving communities — where every moment
+          actually happens live.
+        </p>
+
+        <div class="hero-actions">
+          <a class="primary-button" href="#app">Explore Nexora</a>
+          <a class="secondary-button" href="#features">See Features</a>
+        </div>
+
+        <div class="hero-metrics">
+          <article>
+            <strong>24K</strong>
+            <span>active creators</span>
+          </article>
+          <article>
+            <strong>1.9M</strong>
+            <span>community reactions</span>
+          </article>
+          <article>
+            <strong>87%</strong>
+            <span>return engagement</span>
+          </article>
+        </div>
+      </div>
+
+      <div class="hero-preview">
+        <div class="floating-card trend-card">
+          <span class="tiny-label">Trending now</span>
+          <strong>#NightShiftDesign</strong>
+          <p>12.4K posts in the last 6 hours</p>
+        </div>
+
+        <div class="phone-frame">
+          <div class="phone-top">
+            <span class="status-dot online"></span>
+            <strong>For You</strong>
+            <span class="tiny-pill">Live</span>
+          </div>
+
+          <div class="story-row">
+            <div class="story active">Ava</div>
+            <div class="story">Kai</div>
+            <div class="story">Noor</div>
+            <div class="story">Mia</div>
+          </div>
+
+          <article class="phone-post">
+            <div class="post-author">
+              <div class="avatar coral">L</div>
+              <div>
+                <strong>Lina Chen</strong>
+                <span>3 min ago</span>
+              </div>
+            </div>
+
+            <h3>Launching a creator circle for indie devs building in public.</h3>
+            <p>
+              Looking for people who like product diaries, UI experiments,
+              and fast feedback loops.
+            </p>
+
+            <div class="post-art gradient-card sunrise"></div>
+
+            <div class="post-stats">
+              <span>4.8K likes</span>
+              <span>322 replies</span>
+              <span>128 shares</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="floating-card chat-card">
+          <span class="tiny-label">Direct room</span>
+          <strong>Design Crew</strong>
+          <p>7 members typing right now</p>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="feature-section" id="features">
+      <div class="section-heading">
+        <!-- <p class="eyebrow">Product Highlights</p> -->
+        <h2>Everything you need to connect, create, and move fast.</h2>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card">
+          <span class="feature-icon">01</span>
+          <h3>Immersive Feed</h3>
+          <p>
+            A layered feed with story rails, creator cards, large media
+            surfaces, and reaction patterns that feel native on desktop and
+            mobile.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <span class="feature-icon">02</span>
+          <h3>Community Rooms</h3>
+          <p>
+            Real-time group spaces for topic-based discussion, member
+            discovery, and event-driven interaction without clutter.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <span class="feature-icon">03</span>
+          <h3>Creator Momentum</h3>
+          <p>
+            Spotlight modules for growth, audience snapshots, and post
+            performance so creators always know what is landing.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="app-section" id="app">
+      <div class="section-heading">
+        <!-- <p class="eyebrow">App Preview</p> -->
+        <h2>See what’s happening — right now.</h2>
+      </div>
+
+      <div class="app-shell">
+        <aside class="sidebar">
+          <div class="sidebar-brand">
+            <div class="brand-mark">N</div>
+            <div>
+              <strong>Nexora</strong>
+              <span>Creator social</span>
+            </div>
+          </div>
+
+          <nav class="sidebar-nav">
+            <button class="nav-item active" data-panel="feed" type="button">Feed</button>
+            <button class="nav-item" data-panel="messages" type="button">Messages</button>
+            <button class="nav-item" data-panel="discover" type="button">Discover</button>
+            <button class="nav-item" data-panel="profile" type="button">Profile</button>
+          </nav>
+
+          <!-- <div class="sidebar-promo">
+            <p class="tiny-label">Upgrade</p>
+            <h3>Turn followers into a private circle.</h3>
+            <button class="secondary-button small" type="button">View Plans</button>
+          </div> -->
+        </aside>
+
+        <div class="app-main">
+          <div class="app-toolbar">
+            <div>
+              <p class="toolbar-label">Today</p>
+              <h3>Your network is moving fast</h3>
+            </div>
+
+            <div class="toolbar-actions">
+              <button class="filter-chip active" data-filter="all" type="button">All</button>
+              <button class="filter-chip" data-filter="creators" type="button">Creators</button>
+              <button class="filter-chip" data-filter="rooms" type="button">Rooms</button>
+              <button class="filter-chip" data-filter="media" type="button">Media</button>
+            </div>
+          </div>
+
+          <div class="panel-stack">
+            <section class="panel feed-panel active" data-panel-content="feed">
+              <div class="story-strip">
+                <div class="story-card new-story">
+                  <span>+</span>
+                  <strong>New story</strong>
+                </div>
+                <div class="story-card"><strong>Ari</strong><span>Live session</span></div>
+                <div class="story-card"><strong>June</strong><span>Travel reel</span></div>
+                <div class="story-card"><strong>Omar</strong><span>Studio drop</span></div>
+                <div class="story-card"><strong>Sana</strong><span>Behind the scenes</span></div>
+              </div>
+
+              <div class="composer-card">
+                <div class="composer-top">
+                  <div class="avatar gold">Y</div>
+                  <input id="composerInput" type="text" placeholder="Share an update with your circle..." />
+                </div>
+                <div class="composer-actions">
+                  <label class="ghost-button small" for="photoInput" style="cursor: pointer; margin: 0;">Photo</label>
+                  <input type="file" id="photoInput" accept="image/*" style="display: none;" />
+                  <button class="ghost-button small" type="button">Poll</button>
+                  <button class="primary-button small" id="publishButton" type="button">
+                    Publish
+                  </button>
+                </div>
+                <div id="photoPreviewContainer" style="display: none; position: relative; margin-top: 10px;">
+                  <img id="photoPreview" style="max-height: 150px; border-radius: 8px;" />
+                  <button id="removePhotoBtn" type="button"
+                    style="position: absolute; top: 5px; left: 5px; background: rgba(0,0,0,0.5); color: white; border: none; border-radius: 50%; cursor: pointer; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center;">✕</button>
+                </div>
+              </div>
+
+              <div class="feed-list" id="feedList">
+              </div>
+            </section>
+
+            <section class="panel utility-panel" data-panel-content="messages">
+              <div class="panel-heading">
+                <div>
+                  <p class="toolbar-label">Messages</p>
+                  <h3>Fast, room-aware conversations</h3>
+                </div>
+                <span class="tiny-pill">18 unread</span>
+              </div>
+
+              <div class="message-layout">
+                <div class="message-list">
+                  <article class="message-item active">
+                    <strong>Design Crew</strong>
+                    <span>Prototype looks much stronger now.</span>
+                  </article>
+                  <article class="message-item">
+                    <strong>Lina Chen</strong>
+                    <span>Can you share the hero mockup?</span>
+                  </article>
+                  <article class="message-item">
+                    <strong>Creator Ops</strong>
+                    <span>Analytics summary is ready.</span>
+                  </article>
+                </div>
+
+                <div class="message-thread">
+                  <div class="bubble incoming">We should make the onboarding feel more personal.</div>
+                  <div class="bubble outgoing">Agreed. I’m leaning toward creator-first setup cards.</div>
+                  <div class="bubble incoming">That fits the brand much better.</div>
+                </div>
+              </div>
+            </section>
+
+            <section class="panel utility-panel" data-panel-content="discover">
+              <div class="panel-heading">
+                <div>
+                  <p class="toolbar-label">Discover</p>
+                  <h3>Discover creators that match your momentum</h3>
+                </div>
+              </div>
+
+              <div class="discover-grid" id="discoverGrid">
+                <!-- Dynamically populated by JS -->
+              </div>
+            </section>
+
+            <section class="panel utility-panel" data-panel-content="profile">
+              <div class="panel-heading">
+                <div>
+                  <p class="toolbar-label">Profile</p>
+                  <h3>Creator-facing growth snapshot</h3>
+                </div>
+              </div>
+
+              <div class="profile-overview" id="profileOverview">
+                <!-- Dynamically populated by JS -->
+              </div>
+            </section>
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+  </main>
+</div>
+}
