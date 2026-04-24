@@ -55,4 +55,20 @@ class FollowController @Inject()(
       )
     }))
   }
+
+  // ✅ Get Followers
+  def getFollowers = authAction { request =>
+    val users = userRepo.getFollowers(request.userId)
+    Ok(Json.toJson(users.map { case (id, name) =>
+      Json.obj("id" -> id, "name" -> name)
+    }))
+  }
+
+  // ✅ Get Following
+  def getFollowing = authAction { request =>
+    val users = userRepo.getFollowing(request.userId)
+    Ok(Json.toJson(users.map { case (id, name) =>
+      Json.obj("id" -> id, "name" -> name)
+    }))
+  }
 }

@@ -97,4 +97,46 @@ class UserRepository @Inject()(db: Database)(implicit ec: ExecutionContext) {
       } else None
     }
   }
+
+  // ✅ GET FOLLOWERS
+  def getFollowers(userId: Long): List[(Long, String)] = {
+    db.withConnection { conn =>
+      val stmt = conn.prepareStatement(
+        """
+        SELECT u.id, u.name 
+        FROM users u
+        INNER JOIN follows f ON u.id = f.follower_id
+        WHERE f.following_id = ?
+        """
+      )
+      stmt.setLong(1, userId)
+      val rs = stmt.executeQuery()
+      var users = List[(Long, String)]()
+      while (rs.next()) {
+        users = users :+ (rs.getLong("id"), rs.getString("name"))
+      }
+      users
+    }
+  }
+
+  // ✅ GET FOLLOWING
+  def getFollowing(userId: Long): List[(Long, String)] = {
+    db.withConnection { conn =>
+      val stmt = conn.prepareStatement(
+        """
+        SELECT u.id, u.name 
+        FROM users u
+        INNER JOIN follows f ON u.id = f.following_id
+        WHERE f.follower_id = ?
+        """
+      )
+      stmt.setLong(1, userId)
+      val rs = stmt.executeQuery()
+      var users = List[(Long, String)]()
+      while (rs.next()) {
+        users = users :+ (rs.getLong("id"), rs.getString("name"))
+      }
+      users
+    }
+  }
 }

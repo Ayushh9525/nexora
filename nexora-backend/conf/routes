@@ -32,3 +32,5 @@ GET    /posts/:id/comments    controllers.CommentController.getComments(id: Long
 POST   /follow/:id      controllers.FollowController.follow(id: Long)
 POST   /unfollow/:id    controllers.FollowController.unfollow(id: Long)
 GET    /discover        controllers.FollowController.discover
+GET    /followers       controllers.FollowController.getFollowers
+GET    /following       controllers.FollowController.getFollowing

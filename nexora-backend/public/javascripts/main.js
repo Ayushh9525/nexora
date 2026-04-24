@@ -65,21 +65,96 @@ async function loadProfile() {
             Welcome to your Nexora profile! Keep sharing your moments and engaging with the community to grow your circle.
           </p>
         </div>
-        <div class="profile-card">
+        <div class="profile-card stat-card" id="followersCard" style="cursor: pointer; transition: background 0.2s;">
           <strong>${user.followers}</strong>
           <span>Followers</span>
         </div>
-        <div class="profile-card">
+        <div class="profile-card stat-card" id="followingCard" style="cursor: pointer; transition: background 0.2s;">
           <strong>${user.following}</strong>
           <span>Following</span>
         </div>
       `;
+
+      document.querySelectorAll(".stat-card").forEach(card => {
+        card.addEventListener("mouseenter", () => card.style.background = "rgba(255, 255, 255, 0.1)");
+        card.addEventListener("mouseleave", () => card.style.background = "rgba(255, 255, 255, 0.05)");
+      });
+
+      document.getElementById("followersCard").addEventListener("click", () => fetchAndShowUsers("Followers", "/followers", token));
+      document.getElementById("followingCard").addEventListener("click", () => fetchAndShowUsers("Following", "/following", token));
     } else {
       profileOverview.innerHTML = "<p style='color: #ff6b6b; padding: 1rem;'>Failed to load profile data.</p>";
     }
   } catch (err) {
     profileOverview.innerHTML = "<p style='color: #ff6b6b; padding: 1rem;'>Error loading profile.</p>";
   }
+}
+
+async function fetchAndShowUsers(title, url, token) {
+  try {
+    const res = await fetch(url, { headers: { "Authorization": "Bearer " + token } });
+    if (res.ok) {
+      const users = await res.json();
+      showUserListModal(title, users);
+    } else {
+      alert("Failed to load users");
+    }
+  } catch(e) {
+    console.error(e);
+  }
+}
+
+function showUserListModal(title, users) {
+  const existing = document.getElementById("userListModal");
+  if (existing) existing.remove();
+
+  const modalOverlay = document.createElement("div");
+  modalOverlay.id = "userListModal";
+  modalOverlay.style.position = "fixed";
+  modalOverlay.style.top = "0";
+  modalOverlay.style.left = "0";
+  modalOverlay.style.width = "100%";
+  modalOverlay.style.height = "100%";
+  modalOverlay.style.backgroundColor = "rgba(0,0,0,0.6)";
+  modalOverlay.style.backdropFilter = "blur(5px)";
+  modalOverlay.style.display = "flex";
+  modalOverlay.style.alignItems = "center";
+  modalOverlay.style.justifyContent = "center";
+  modalOverlay.style.zIndex = "1000";
+
+  let listHtml = "";
+  if (users.length === 0) {
+    listHtml = `<p style="text-align: center; color: #6a5666; margin: 2rem 0;">No users found.</p>`;
+  } else {
+    listHtml = `<div style="display: flex; flex-direction: column; gap: 1rem; max-height: 300px; overflow-y: auto; padding-right: 10px;">`;
+    users.forEach(user => {
+      const avatarChar = user.name.charAt(0).toUpperCase();
+      listHtml += `
+        <div style="display: flex; align-items: center; gap: 1rem; padding: 0.5rem; border-radius: 8px; background: rgba(255,255,255,0.05);">
+          <div class="avatar gold">${avatarChar}</div>
+          <strong style="flex: 1;">${user.name}</strong>
+        </div>
+      `;
+    });
+    listHtml += `</div>`;
+  }
+
+  modalOverlay.innerHTML = `
+    <div style="background: #1c151a; color: #fdfafc; border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; width: 90%; max-width: 400px; padding: 1.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+        <h3 style="margin: 0; font-size: 1.2rem; color: #fff;">${title}</h3>
+        <button id="closeModalBtn" style="background: none; border: none; color: #a996a6; font-size: 1.5rem; cursor: pointer; transition: color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#a996a6'">&times;</button>
+      </div>
+      ${listHtml}
+    </div>
+  `;
+
+  document.body.appendChild(modalOverlay);
+
+  document.getElementById("closeModalBtn").addEventListener("click", () => modalOverlay.remove());
+  modalOverlay.addEventListener("click", (e) => {
+    if (e.target === modalOverlay) modalOverlay.remove();
+  });
 }
 
 async function loadDiscoverPeople() {
